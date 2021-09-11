@@ -1,0 +1,20 @@
+{
+
+  "manifest_version": 2,
+  "name": "QAnon",
+  "version": "1.1",
+
+  "description": "Switch to manipulate post content and GEMATRIA",
+
+  "icons": {
+    "48": "icons/border-48.png"
+  },
+  "permissions" : ["https://qrng.anu.edu.au/API*", "http://translate.google.com/*"],
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.4channel.org/*", "*://*.4chan.org/*"],
+      "js": ["lib/jquery-3.6.0.min.js", "hex16.js", "GEMATRIA.js"]
+    }
+  ]
+}
